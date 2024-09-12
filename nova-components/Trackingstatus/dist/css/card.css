@@ -1,0 +1,42 @@
+/* Nova Card CSS */
+.my-component-scoped .flex {
+    display: flex
+}
+.my-component-scoped .table {
+    display: table
+}
+.my-component-scoped .w-full {
+    width: 100%
+}
+.my-component-scoped .flex-col {
+    flex-direction: column
+}
+.my-component-scoped .justify-center {
+    justify-content: center
+}
+.my-component-scoped .px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem
+}
+.my-component-scoped .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem
+}
+.my-component-scoped .text-left {
+    text-align: left
+}
+.my-component-scoped .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem
+}
+.my-component-scoped .font-bold {
+    font-weight: 700
+}
+.my-component-scoped .text-blue-500 {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity))
+}
+.my-component-scoped .text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity))
+}
