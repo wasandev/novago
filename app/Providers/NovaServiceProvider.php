@@ -100,7 +100,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         parent::boot();
         Nova::withBreadcrumbs();
-        
+        Nova::withoutGlobalSearch();
         Nova::footer(
             fn () => view('vendor.nova.partials.footer', [
                 'quote' => \Illuminate\Foundation\Inspiring::quote(),

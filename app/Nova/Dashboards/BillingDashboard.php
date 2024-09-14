@@ -52,6 +52,6 @@ class BillingDashboard extends Dashboard
      */
     public  function label()
     {
-        return 'พนักงานออกเอกสาร';
+        return 'Dashboard งานออกเอกสาร';
     }
 }

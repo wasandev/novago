@@ -49,6 +49,6 @@ class BranchDashboard extends Dashboard
      */
     public  function label()
     {
-        return 'ข้อมูลสรุปสาขา';
+        return 'Dashboard งานสาขา';
     }
 }

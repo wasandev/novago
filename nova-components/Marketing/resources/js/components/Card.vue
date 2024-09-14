@@ -8,7 +8,7 @@
 
       <card>
         <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-            <div class="align-top w-1/2 ">
+            <div class="align-top w-1/2 border-r border-b border-50 ">
                  <a :href="marketing1" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
@@ -24,14 +24,14 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ข้อมูลลูกค้า</heading>
+                        <heading :level="2" class="mb-3">ข้อมูลลูกค้า</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดู แก้ไข เพิ่มข้อมูลลูกค้า
                           </p>
                       </div>
                     </a>
             </div>
-            <div class="align-top w-1/2 ">
+            <div class="align-top w-1/2  border-b border-50 ">
                   <a :href="marketing2" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
@@ -47,7 +47,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ราคาค่าขนส่งสินค้า</heading>
+                        <heading :level="2" class="mb-3">ราคาค่าขนส่งสินค้า</heading>
                           <p class="text-90 leading-normal">
                             จัดการข้อมูลราคาค่าขนส่งสินค้า
                           </p>
@@ -56,7 +56,7 @@
             </div>
         </div>
        <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-            <div class="align-top w-1/2 ">
+            <div class="align-top w-1/2 border-r border-b border-50 ">
                   <a :href="marketing3" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
@@ -73,7 +73,7 @@
 
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ใบรับส่งสินค้า</heading>
+                        <heading :level="2" class="mb-3">ใบรับส่งสินค้า</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดู ใบรับส่งสินค้า
                           </p>
@@ -81,7 +81,7 @@
                     </a>
             </div>
 
-            <div class="align-top w-1/2 ">
+            <div class="align-top w-1/2  border-b border-50">
                   <a :href="marketing4" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
@@ -97,7 +97,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ใบกำกับสินค้า</heading>
+                        <heading :level="2" class="mb-3">ใบกำกับสินค้า</heading>
                           <p class="text-90 leading-normal">
                             ดู ใบกำกับสินค้า
                           </p>
@@ -107,7 +107,7 @@
         </div>
 
         <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-            <div class="align-top w-1/2 ">
+            <div class="align-top w-1/2 border-r border-50">
                   <a :href="maketing5" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
@@ -123,7 +123,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ข้อมูลสินค้า</heading>
+                        <heading :level="2" class="mb-3">ข้อมูลสินค้า</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดู แก้ไข สร้างข้อมูลสินค้า
                           </p>
@@ -131,7 +131,7 @@
                     </a>
             </div>
 
-            <div class="align-top w-1/2 ">
+            <div class="align-top w-1/2 border-50 ">
                 <a :href="maketing6" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
@@ -147,7 +147,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ข้อมูลผู้ใช้</heading>
+                        <heading :level="2" class="mb-3">ข้อมูลผู้ใช้</heading>
                           <p class="text-90 leading-normal">
                             แก้ไขรายละเอียดบัญชีผู้ใช้ของตัวเอง
                           </p>

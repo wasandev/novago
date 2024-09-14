@@ -8,6 +8,9 @@
 .my-component-scoped .mr-6 {
     margin-right: 1.5rem
 }
+.my-component-scoped .mt-2 {
+    margin-top: 0.5rem
+}
 .my-component-scoped .mt-3 {
     margin-top: 0.75rem
 }
@@ -35,6 +38,9 @@
 .my-component-scoped .border-r {
     border-right-width: 1px
 }
+.my-component-scoped .fill-blue-400 {
+    fill: #60a5fa
+}
 .my-component-scoped .p-6 {
     padding: 1.5rem
 }
@@ -43,6 +49,9 @@
 }
 .my-component-scoped .align-middle {
     vertical-align: middle
+}
+.my-component-scoped .leading-normal {
+    line-height: 1.5
 }
 .my-component-scoped .leading-tight {
     line-height: 1.25

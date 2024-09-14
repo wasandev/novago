@@ -62,12 +62,13 @@ var _hoisted_4 = {
   cellspacing: "10"
 };
 var _hoisted_5 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-r border-50"
 };
 var _hoisted_6 = ["href"];
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -80,12 +81,13 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "text-90 leading-normal"
 }, " รายการจัดส่งสินค้า ", -1 /* HOISTED */);
 var _hoisted_9 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2"
 };
 var _hoisted_10 = ["href"];
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -113,7 +115,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.sender1,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -124,7 +126,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.sender2,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {

@@ -92,7 +92,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "text-90 leading-normal"
 }, " ค้นหา แก้ไข สร้าง พิมพ์ใบรับส่งสินค้า ", -1 /* HOISTED */);
 var _hoisted_9 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_10 = ["href"];
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -133,7 +133,7 @@ var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู แก้ไข เพิ่มข้อมูลลูกค้า ", -1 /* HOISTED */);
 var _hoisted_18 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_19 = ["href"];
 var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -156,7 +156,7 @@ var _hoisted_22 = {
   cellspacing: "10"
 };
 var _hoisted_23 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-r border-50"
 };
 var _hoisted_24 = ["href"];
 var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -174,7 +174,7 @@ var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู รายละเอียดรายการสินค้ามีปัญหา ", -1 /* HOISTED */);
 var _hoisted_27 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2"
 };
 var _hoisted_28 = ["href"];
 var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {

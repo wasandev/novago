@@ -80,6 +80,7 @@ var _hoisted_6 = ["href"];
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -92,12 +93,13 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู จัดการ รายการโอนเงินค่าขนส่ง ", -1 /* HOISTED */);
 var _hoisted_9 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_10 = ["href"];
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -121,6 +123,7 @@ var _hoisted_15 = ["href"];
 var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -133,12 +136,13 @@ var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู แก้ไข พิมพ์ รายการจ่ายเงินรถ ", -1 /* HOISTED */);
 var _hoisted_18 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_19 = ["href"];
 var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -156,16 +160,17 @@ var _hoisted_22 = {
   cellspacing: "10"
 };
 var _hoisted_23 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-r border-50"
 };
 var _hoisted_24 = ["href"];
 var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
-  viewBox: "0 0 40 40"
+  viewBox: "0 0 20 20"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
   fill: "var(--primary)",
   d: "M29 7h5c.5522847 0 1 .44771525 1 1s-.4477153 1-1 1h-5v5c0 .5522847-.4477153 1-1 1s-1-.4477153-1-1V9h-5c-.5522847 0-1-.44771525-1-1s.4477153-1 1-1h5V2c0-.55228475.4477153-1 1-1s1 .44771525 1 1v5zM4 0h8c2.209139 0 4 1.790861 4 4v8c0 2.209139-1.790861 4-4 4H4c-2.209139 0-4-1.790861-4-4V4c0-2.209139 1.790861-4 4-4zm0 2c-1.1045695 0-2 .8954305-2 2v8c0 1.1.9 2 2 2h8c1.1045695 0 2-.8954305 2-2V4c0-1.1045695-.8954305-2-2-2H4zm20 18h8c2.209139 0 4 1.790861 4 4v8c0 2.209139-1.790861 4-4 4h-8c-2.209139 0-4-1.790861-4-4v-8c0-2.209139 1.790861-4 4-4zm0 2c-1.1045695 0-2 .8954305-2 2v8c0 1.1.9 2 2 2h8c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-8zM4 20h8c2.209139 0 4 1.790861 4 4v8c0 2.209139-1.790861 4-4 4H4c-2.209139 0-4-1.790861-4-4v-8c0-2.209139 1.790861-4 4-4zm0 2c-1.1045695 0-2 .8954305-2 2v8c0 1.1.9 2 2 2h8c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2H4z"
@@ -174,12 +179,13 @@ var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดูรายการใบรับส่งสินค้า ", -1 /* HOISTED */);
 var _hoisted_27 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2"
 };
 var _hoisted_28 = ["href"];
 var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -207,7 +213,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.financial1,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -218,7 +224,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.financial2,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -229,7 +235,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.financial3,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -240,7 +246,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.financial4,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -251,7 +257,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.financial5,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -262,7 +268,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.financial6,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {

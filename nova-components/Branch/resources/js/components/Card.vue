@@ -19,14 +19,14 @@
                              
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3 font-bold text-blue-400">รายการรถเข้าสาขา</heading>
+                            <heading :level="2" class="mb-3 font-bold text-blue-400">รายการรถเข้าสาขา</heading>
                             <p class="">
                                 ดูรายการรถเข้าสาขา
                             </p>
                         </div>
                     </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                      <a :href="branch2" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                            <svg class="fill-blue-400"
@@ -42,7 +42,7 @@
                            
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3  text-blue-400">รายการใบรับส่งเข้าสาขา</heading>
+                            <heading :level="2" class="mb-3  text-blue-400">รายการใบรับส่งเข้าสาขา</heading>
                             <p>
                                 รายการใบรับส่งเข้าสาขา
                             </p>
@@ -62,14 +62,14 @@
                             
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3  text-blue-400">รายการจัดส่งสินค้าของสาขา</heading>
+                            <heading :level="2" class="mb-3  text-blue-400">รายการจัดส่งสินค้าของสาขา</heading>
                             <p class="text-90 leading-normal">
                                 รายการจัดส่งสินค้าของสาขา
                             </p>
                             </div>
                         </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                     <a :href="branch4" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                            <svg class="fill-blue-400"
@@ -84,7 +84,7 @@
                             
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3  text-blue-400">รายการเก็บเงินปลายทางของสาขา</heading>
+                            <heading :level="2" class="mb-3  text-blue-400">รายการเก็บเงินปลายทางของสาขา</heading>
                             <p class="text-90 leading-normal">
                                 ดูรายการเก็บเงินปลายทางของสาขา
                             </p>
@@ -109,14 +109,14 @@
                                 </svg>
                             </div>
                             <div>
-                                <heading :level="3" class="mb-3  text-blue-400">รายการใบเสร็จรับเงินปลายทาง</heading>
+                                <heading :level="2" class="mb-3  text-blue-400">รายการใบเสร็จรับเงินปลายทาง</heading>
                                 <p class="text-90 leading-normal">
                                     ดูรายการใบเสร็จรับเงินปลายทาง
                                 </p>
                             </div>
                         </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                     <a :href="branch6" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                            <svg class="fill-blue-400"
@@ -159,14 +159,14 @@
                                 </svg>
                             </div>
                             <div>
-                                <heading :level="3" class="mb-3  text-blue-400">รายการเก็บเงินปลายทางของสาขา</heading>
+                                <heading :level="2" class="mb-3  text-blue-400">รายการเก็บเงินปลายทางของสาขา</heading>
                                 <p class="text-90 leading-normal">
                                     ดูรายการเก็บเงินปลายทางของสาขา
                                 </p>
                             </div>
                         </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                     <a :href="branch8" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                            <svg class="fill-blue-400"
@@ -208,14 +208,14 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3  text-blue-400">ค่าขนส่ง</heading>
+                            <heading :level="2" class="mb-3  text-blue-400">ค่าขนส่ง</heading>
                             <p class="text-90 leading-normal">
                                 ค้นหา ดูข้อมูลราคาค่าขนส่งสินค้า
                             </p>
                         </div>
                     </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                     <a :href="branch10" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                            <svg class="fill-blue-400"
@@ -231,7 +231,7 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3  text-blue-400">ข้อมูลลูกค้า</heading>
+                            <heading :level="2" class="mb-3  text-blue-400">ข้อมูลลูกค้า</heading>
                             <p class="text-90 leading-normal">
                                 ค้นหา ดู แก้ไข เพิ่มข้อมูลลูกค้า
                             </p>
@@ -241,7 +241,7 @@
             </div>
 
             <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2 border-r  border-50">
                     <a :href="branch11" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                            <svg class="fill-red-500"
@@ -257,14 +257,14 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-2 text-blue-400">รายการสินค้ามีปัญหา</heading>
+                            <heading :level="2" class="mb-2 text-blue-400">รายการสินค้ามีปัญหา</heading>
                             <p class="text-90 leading-normal">
                                 ค้นหา ดู แก้ไข รายการสินค้ามีปัญหา สูญหาย เสียหาย
                             </p>
                         </div>
                     </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2 ">
                     <a :href="branch12" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                            <svg class="fill-blue-400"
@@ -280,7 +280,7 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3 text-blue-400">ข้อมูลผู้ใช้</heading>
+                            <heading :level="2" class="mb-3 text-blue-400">ข้อมูลผู้ใช้</heading>
                             <p class="text-90 leading-normal">
                                 แก้ไขรายละเอียดบัญชีผู้ใช้ของตัวเอง
                             </p>

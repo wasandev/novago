@@ -12,8 +12,6 @@ class Billingnote_item extends Resource
 {
     public static $group = '9.1 งานลูกหนี้การค้า';
     public static $displayInNavigation = false;
-
-
     public static $globallySearchable = false;
     /**
      * The model the resource corresponds to.
@@ -55,13 +53,11 @@ class Billingnote_item extends Resource
                 ->sortable(),
             BelongsTo::make(__('Created by'), 'user', 'App\Nova\User')
                 ->onlyOnDetail(),
-            DateTime::make(__('Created At'), 'created_at')
-                ->format('DD/MM/YYYY hh:mm')
+            DateTime::make(__('Created At'), 'created_at')                
                 ->onlyOnDetail(),
             BelongsTo::make(__('Updated by'), 'user_update', 'App\Nova\User')
                 ->onlyOnDetail(),
-            DateTime::make(__('Updated At'), 'updated_at')
-                ->format('DD/MM/YYYY hh:mm')
+            DateTime::make(__('Updated At'), 'updated_at')               
                 ->onlyOnDetail(),
         ];
     }

@@ -86,6 +86,7 @@ var _hoisted_6 = ["href"];
 var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -98,12 +99,13 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู ใบรับส่งสินค้า ", -1 /* HOISTED */);
 var _hoisted_9 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_10 = ["href"];
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -127,6 +129,7 @@ var _hoisted_15 = ["href"];
 var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -139,12 +142,13 @@ var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู บัญชีรับ-จ่ายของรถ ", -1 /* HOISTED */);
 var _hoisted_18 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_19 = ["href"];
 var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -168,6 +172,7 @@ var _hoisted_24 = ["href"];
 var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -180,12 +185,13 @@ var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู แก้ไข พิมพ์ รายการรับเงินรถ ", -1 /* HOISTED */);
 var _hoisted_27 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_28 = ["href"];
 var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -203,12 +209,13 @@ var _hoisted_31 = {
   cellspacing: "10"
 };
 var _hoisted_32 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-r border-50"
 };
 var _hoisted_33 = ["href"];
 var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -221,12 +228,13 @@ var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ดู แก้ไข เพิ่ม พิมพ์ ใบเสร็จรับเงิน ", -1 /* HOISTED */);
 var _hoisted_36 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2"
 };
 var _hoisted_37 = ["href"];
 var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex justify-center w-11 flex-no-shrink mr-6"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "fill-blue-400",
   xmlns: "http://www.w3.org/2000/svg",
   width: "40",
   height: "40",
@@ -254,7 +262,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account1,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -265,7 +273,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account2,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -276,7 +284,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account3,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -287,7 +295,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account4,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -298,7 +306,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account5,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -309,7 +317,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account6,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -320,7 +328,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account7,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -331,7 +339,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.account8,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {

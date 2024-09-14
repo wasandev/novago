@@ -46,6 +46,6 @@ class FnDashboard extends Dashboard
     }
     public  function label()
     {
-        return 'ข้อมูลสรุปการเงิน';
+        return 'Dashboard งานการเงิน';
     }
 }

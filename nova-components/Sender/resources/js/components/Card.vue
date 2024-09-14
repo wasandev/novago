@@ -8,10 +8,10 @@
 
       <card>
         <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-            <div class="align-top w-1/2 border-r border-b border-50">
+            <div class="align-top w-1/2 border-r  border-50">
                 <a :href="sender1" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
@@ -26,7 +26,7 @@
 
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">รายการจัดส่งสินค้า</heading>
+                        <heading :level="2" class="mb-3">รายการจัดส่งสินค้า</heading>
                           <p class="text-90 leading-normal">
                             รายการจัดส่งสินค้า
                           </p>
@@ -34,10 +34,10 @@
                     </a>
             </div>
 
-            <div class="align-top w-1/2 border-r border-b border-50">
+            <div class="align-top w-1/2 ">
                 <a :href="sender2" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
@@ -50,7 +50,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ข้อมูลลูกค้า</heading>
+                        <heading :level="2" class="mb-3">ข้อมูลลูกค้า</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดู QR Code และรายละเอียดต่างๆของลูกค้า
                           </p>

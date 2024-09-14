@@ -38,6 +38,6 @@ class LoaderDashboard extends Dashboard
      */
     public  function label()
     {
-        return 'งานจัดขึ้นสินค้า';
+        return 'Dashboard งานจัดขึ้นสินค้า';
     }
 }

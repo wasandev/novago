@@ -10,7 +10,7 @@
                 <div class="align-top w-1/2 border-b border-r border-50">
                     <a :href="loading1" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -24,16 +24,18 @@
 
                         </div>
                         <div class="mt-3">
-                            <heading :level="3" class="align-middle">ตรวจรับสินค้า</heading>
-
+                            <heading :level="2" class="align-middle">ตรวจรับสินค้า</heading>
+                            <p class="text-90 leading-normal">
+                                รายการตรวจรับสินค้า
+                          </p>
                         </div>
                     </a>
                 </div>
 
-                <div class="align-top w-1/2 border-b border-r border-50 ">
+                <div class="align-top w-1/2 border-b  border-50 ">
                    <a :href="loading2" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -46,8 +48,10 @@
                             </svg>
                         </div>
                         <div class="mt-3">
-                            <heading :level="3" class="mb-3">รายการจัดขึ้นสินค้า</heading>
-
+                            <heading :level="2" class="mb-3">รายการจัดขึ้นสินค้า</heading>
+                            <p class="text-90 leading-normal">
+                                ทำรายการจัดสินค้าขึ้นรถบรรทุก
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -58,7 +62,7 @@
                 <div class="align-top w-1/2 border-b border-r border-50 ">
                     <a :href="loading3" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -71,15 +75,18 @@
                             </svg>
                         </div>
                         <div class="mt-3">
-                            <heading :level="3" class="mb-3">ใบกำกับสินค้า</heading>
+                            <heading :level="2" class="mb-3">ใบกำกับสินค้า</heading>
+                            <p class="text-90 leading-normal">
+                                รายการใบกำกับสินค้า
+                            </p>
 
                         </div>
                     </a>
                 </div>
-                <div class="align-top w-1/2 border-b border-r border-50  ">
+                <div class="align-top w-1/2 border-b  border-50  ">
                    <a :href="loading4" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -92,18 +99,20 @@
                             </svg>
                         </div>
                         <div class="mt-3">
-                            <heading :level="3" class="mb-3">ข้อมูลลูกค้า</heading>
-
+                            <heading :level="2" class="mb-3">ข้อมูลลูกค้า</heading>
+                            <p class="text-90 leading-normal">
+                                เพิ่ม บันทึก แก้ไข ข้อมูลสินค้า
+                          </p>
                         </div>
                     </a>
                 </div>
             </div>
 
             <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-                <div class="align-top w-1/2 border-b border-r border-50">
+                <div class="align-top w-1/2  border-r border-50">
                    <a :href="loading5" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -116,15 +125,18 @@
                             </svg>
                         </div>
                         <div class="mt-3">
-                            <heading :level="3" >ดูราคาค่าขนส่งสินค้า</heading>
+                            <heading :level="2" >ดูราคาค่าขนส่งสินค้า</heading>
+                            <p class="text-90 leading-normal">
+                                ดู ค้นหา ค่าขนส่งสินค้า
+                          </p>
                         </div>
                     </a>
                 </div>
 
-                <div class="align-top w-1/2 border-b border-r border-50 ">
+                <div class="align-top w-1/2 ">
                     <a :href="loading6" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -136,8 +148,11 @@
                             />
                             </svg>
                         </div>
-                        <div class="mt-3">
-                            <heading :level="3" class="mb-3">ข้อมูลผู้ใช้</heading>
+                        <div class="mt-2">
+                            <heading :level="2" class="mb-3">ข้อมูลผู้ใช้</heading>
+                            <p class="text-90 leading-normal">
+                                ดู แก้ไข ข้อมูลผู้ใช้
+                            </p>
 
                         </div>
                     </a>

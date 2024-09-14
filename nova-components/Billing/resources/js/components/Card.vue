@@ -33,7 +33,7 @@
                     </a>
                 </div>
 
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                     <a :href="billing2" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                             <svg class="fill-blue-400"
@@ -82,7 +82,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                     <a :href="billing4" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                             <svg class="fill-green-400"
@@ -108,7 +108,7 @@
             </div>
 
             <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2 border-r  border-50">
                     <a :href="billing5" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                             <svg class="fill-red-500"
@@ -132,7 +132,7 @@
                     </a>
                 </div>
 
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2">
                     <a :href="billing6" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
                             <svg class="fill-blue-400"

@@ -60,6 +60,6 @@ class TruckDashboard extends Dashboard
      */
     public function label()
     {
-        return 'ข้อมูลสรุปรถบรรทุก';
+        return 'Dashboard งานบรรทุก';
     }
 }

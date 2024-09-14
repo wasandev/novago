@@ -104,6 +104,6 @@ class AdminDashboard extends Dashboard
      */
     public  function label()
     {
-        return 'สำหรับผู้บริหาร';
+        return 'Dashboard ผู้บริหาร';
     }
 }

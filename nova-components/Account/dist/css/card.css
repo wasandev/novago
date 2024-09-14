@@ -32,6 +32,9 @@
 .my-component-scoped .border-r {
     border-right-width: 1px
 }
+.my-component-scoped .fill-blue-400 {
+    fill: #60a5fa
+}
 .my-component-scoped .p-6 {
     padding: 1.5rem
 }

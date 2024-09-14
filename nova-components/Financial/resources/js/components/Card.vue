@@ -11,7 +11,7 @@
             <div class="align-top w-1/2 border-r border-b border-50">
                  <a :href="financial1" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
@@ -24,7 +24,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">รายการโอนเงินค่าขนส่ง</heading>
+                        <heading :level="2" class="mb-3">รายการโอนเงินค่าขนส่ง</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดู จัดการ รายการโอนเงินค่าขนส่ง
                           </p>
@@ -32,10 +32,10 @@
                     </a>
             </div>
 
-            <div class="align-top w-1/2 border-r border-b border-50">
+            <div class="align-top w-1/2  border-b border-50">
                  <a :href="financial2" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
@@ -48,7 +48,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ใบเสร็จรับเงิน</heading>
+                        <heading :level="2" class="mb-3">ใบเสร็จรับเงิน</heading>
                           <p class="text-90 leading-normal">
                             ดู แก้ไข เพิ่ม พิมพ์ ใบเสร็จรับเงิน
                           </p>
@@ -60,7 +60,7 @@
             <div class="align-top w-1/2 border-r border-b border-50">
                 <a :href="financial3" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
@@ -73,17 +73,17 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">จ่ายเงินรถ</heading>
+                        <heading :level="2" class="mb-3">จ่ายเงินรถ</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดู แก้ไข พิมพ์ รายการจ่ายเงินรถ
                           </p>
                       </div>
                     </a>
             </div>
-            <div class="align-top w-1/2 border-r border-b border-50">
+            <div class="align-top w-1/2 border-b border-50">
                 <a :href="financial4" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
@@ -96,7 +96,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">รับเงินรถ</heading>
+                        <heading :level="2" class="mb-3">รับเงินรถ</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดู แก้ไข พิมพ์ รายการรับเงินรถ
                           </p>
@@ -105,14 +105,14 @@
             </div>
         </div>
         <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-            <div class="align-top w-1/2 border-r border-b border-50">
+            <div class="align-top w-1/2 border-r border-50">
                 <a :href="financial5" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
-                          viewBox="0 0 40 40"
+                          viewBox="0 0 20 20"
                         >
                           <path
                             fill="var(--primary)"
@@ -122,7 +122,7 @@
 
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ใบรับส่งสินค้า</heading>
+                        <heading :level="2" class="mb-3">ใบรับส่งสินค้า</heading>
                           <p class="text-90 leading-normal">
                             ค้นหา ดูรายการใบรับส่งสินค้า
                           </p>
@@ -130,10 +130,10 @@
                     </a>
             </div>
 
-            <div class="align-top w-1/2 border-r border-b border-50">
+            <div class="align-top w-1/2">
                 <a :href="financial6" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                        <svg
+                        <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
                           height="40"
@@ -146,7 +146,7 @@
                         </svg>
                       </div>
                       <div>
-                        <heading :level="3" class="mb-3">ข้อมูลผู้ใช้</heading>
+                        <heading :level="2" class="mb-3">ข้อมูลผู้ใช้</heading>
                           <p class="text-90 leading-normal">
                             แก้ไขรายละเอียดบัญชีผู้ใช้ของตัวเอง
                           </p>

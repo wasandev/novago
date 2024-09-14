@@ -113,7 +113,7 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": ""
 }, " ดูรายการรถเข้าสาขา ", -1 /* HOISTED */);
 var _hoisted_9 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_10 = ["href"];
 var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -156,7 +156,7 @@ var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " รายการจัดส่งสินค้าของสาขา ", -1 /* HOISTED */);
 var _hoisted_18 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_19 = ["href"];
 var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -199,7 +199,7 @@ var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ดูรายการใบเสร็จรับเงินปลายทาง ", -1 /* HOISTED */);
 var _hoisted_27 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_28 = ["href"];
 var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -242,7 +242,7 @@ var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ดูรายการเก็บเงินปลายทางของสาขา ", -1 /* HOISTED */);
 var _hoisted_36 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_37 = ["href"];
 var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -285,7 +285,7 @@ var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดูข้อมูลราคาค่าขนส่งสินค้า ", -1 /* HOISTED */);
 var _hoisted_45 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-b border-50"
 };
 var _hoisted_46 = ["href"];
 var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -309,7 +309,7 @@ var _hoisted_49 = {
   cellspacing: "10"
 };
 var _hoisted_50 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2 border-r border-50"
 };
 var _hoisted_51 = ["href"];
 var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -327,7 +327,7 @@ var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "text-90 leading-normal"
 }, " ค้นหา ดู แก้ไข รายการสินค้ามีปัญหา สูญหาย เสียหาย ", -1 /* HOISTED */);
 var _hoisted_54 = {
-  "class": "align-top w-1/2 border-r border-b border-50"
+  "class": "align-top w-1/2"
 };
 var _hoisted_55 = ["href"];
 var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -361,7 +361,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch1,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 font-bold text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -372,7 +372,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch2,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -383,7 +383,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch3,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -394,7 +394,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch4,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -405,7 +405,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch5,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -427,7 +427,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch7,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -449,7 +449,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch9,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -460,7 +460,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch10,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_47, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -471,7 +471,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch11,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-2 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -482,7 +482,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         href: $options.branch12,
         "class": "no-underline dim flex p-6 hover:text-blue-500"
       }, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_heading, {
-        level: 3,
+        level: 2,
         "class": "mb-3 text-blue-400"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {

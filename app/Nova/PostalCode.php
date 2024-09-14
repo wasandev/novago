@@ -29,7 +29,7 @@ class PostalCode extends Resource
 
     public static function availableForNavigation(Request $request)
      {
-        return $request->user()->hasPermissionTo('edit postal-codes');
+        return $request->user()->hasPermissionTo('view Postal-codes');
      }
     public static function searchableColumns()
     {

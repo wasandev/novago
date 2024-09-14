@@ -11,7 +11,7 @@
                 <div class="align-top w-1/2 border-r border-b border-50">
                     <a :href="araccount1" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -25,7 +25,7 @@
 
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3">รายการใบรับส่งวางบิล</heading>
+                            <heading :level="2" class="mb-3">รายการใบรับส่งวางบิล</heading>
                             <p class="text-90 leading-normal">
                                 ค้นหา ดู รายการใบรับส่งวางบิล
                             </p>
@@ -33,10 +33,10 @@
                     </a>
                 </div>
 
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2 border-b border-50">
                     <a :href="araccount2" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -49,7 +49,7 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3">ใบแจ้งหนี้</heading>
+                            <heading :level="2" class="mb-3">ใบแจ้งหนี้</heading>
                             <p class="text-90 leading-normal">
                                 ดู แก้ไข เพิ่ม พิมพ์ ใบแจ้งหนี้
                             </p>
@@ -61,7 +61,7 @@
                 <div class="align-top w-1/2 border-r border-b border-50">
                     <a :href="araccount3" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -74,17 +74,17 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3">ใบเสร็จรับเงินวางบิล</heading>
+                            <heading :level="2" class="mb-3">ใบเสร็จรับเงินวางบิล</heading>
                             <p class="text-90 leading-normal">
                                 ค้นหา ดู แก้ไข เพิ่มใบเสร็จรับเงินวางบิล
                             </p>
                         </div>
                     </a>
                 </div>
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2  border-b border-50">
                    <a :href="araccount4" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -97,7 +97,7 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3">ข้อมูลลูกค้าวางบิล</heading>
+                            <heading :level="2" class="mb-3">ข้อมูลลูกค้าวางบิล</heading>
                             <p class="text-90 leading-normal">
                                 ค้นหา ดู แก้ไข เพิ่มข้อมูลลูกค้าวางบิล
                             </p>
@@ -106,10 +106,10 @@
                 </div>
             </div>
             <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2 border-r  border-50">
                     <a :href="araccount5" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -122,7 +122,7 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3">รายการโอนเงินค่าขนส่ง</heading>
+                            <heading :level="2" class="mb-3">รายการโอนเงินค่าขนส่ง</heading>
                             <p class="text-90 leading-normal">
                                 ค้นหา ดู จัดการ รายการโอนเงินค่าขนส่ง
                             </p>
@@ -130,10 +130,10 @@
                     </a>
                 </div>
 
-                <div class="align-top w-1/2 border-r border-b border-50">
+                <div class="align-top w-1/2 ">
                     <a :href="araccount6" class="no-underline dim flex p-6   hover:text-blue-500">
                         <div class="flex justify-center w-11 flex-no-shrink mr-6">
-                            <svg
+                            <svg class="fill-blue-400"
                             xmlns="http://www.w3.org/2000/svg"
                             width="40"
                             height="40"
@@ -146,7 +146,7 @@
                             </svg>
                         </div>
                         <div>
-                            <heading :level="3" class="mb-3">ข้อมูลผู้ใช้</heading>
+                            <heading :level="2" class="mb-3">ข้อมูลผู้ใช้</heading>
                             <p class="text-90 leading-normal">
                                 แก้ไขรายละเอียดบัญชีผู้ใช้ของตัวเอง
                             </p>

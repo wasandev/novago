@@ -73,6 +73,6 @@ class AcDashboard extends Dashboard
      */
     public  function label()
     {
-        return 'ข้อมูลสรุป';
+        return 'Dashboard ฝ่ายบัญชี';
     }
 }
