@@ -108,7 +108,7 @@
 
         <div class="w-full flex flex-wrap" cellpadding="10" cellspacing="10">
             <div class="align-top w-1/2 border-r border-50">
-                  <a :href="maketing5" class="no-underline dim flex p-6   hover:text-blue-500">
+                  <a :href="marketing5" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@
             </div>
 
             <div class="align-top w-1/2 border-50 ">
-                <a :href="maketing6" class="no-underline dim flex p-6   hover:text-blue-500">
+                <a :href="marketing6" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"

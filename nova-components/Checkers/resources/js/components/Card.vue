@@ -85,7 +85,7 @@
             </div>
 
             <div class="align-top w-1/2  border-50">
-                 <a :href="check4" class="no-underline dim flex p-6   hover:text-blue-500">
+                 <a :href="checker4" class="no-underline dim flex p-6   hover:text-blue-500">
                       <div class="flex justify-center w-11 flex-no-shrink mr-6">
                         <svg class="fill-blue-400"
                           xmlns="http://www.w3.org/2000/svg"
