@@ -111,7 +111,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
 
         Nova::mainMenu(function (Request $request) {
             return [
-                
+                MenuSection::dashboard(Main::class)->icon('chart-bar'),  
                 MenuSection::dashboard(TruckDashboard::class)->icon('document-report')
                             ->canSee(function ($request) {
                                 return  $request->user()->hasPermissionTo('view truckdashboards');
@@ -136,10 +136,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                             ->canSee(function ($request) {
                                 return  $request->user()->hasPermissionTo('view acdashboards');
                             }),                
-                MenuSection::dashboard(ReportDashboard::class)->icon('document-report')
-                            ->canSee(function ($request) {
-                                return  $request->user()->hasPermissionTo('view reportdashboards');
-                            }),
+                
                 MenuSection::dashboard(MkDashboard::class)->icon('document-report')
                             ->canSee(function ($request) {
                                 return  $request->user()->hasPermissionTo('view mkdashboards');
@@ -148,7 +145,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                             ->canSee(function ($request) {
                                 return  $request->user()->hasPermissionTo('view admindashboards');
                             }),      
-                MenuSection::dashboard(Main::class)->icon('chart-bar'),            
+                   
+                MenuSection::dashboard(ReportDashboard::class)->icon('document-report')
+                            ->canSee(function ($request) {
+                                return  $request->user()->hasPermissionTo('view reportdashboards');
+                            }),       
                 MenuSection::make('สำหรับผู้ดูแลระบบ', [
                     MenuItem::resource(CompanyProfile::class),
                     MenuItem::resource(Branch::class),
