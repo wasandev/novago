@@ -9,13 +9,12 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-// use Epartment\NovaDependencyContainer\HasDependencies;
-// use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\FormData;
 
 class Order_detail extends Resource
 {
-   //    use HasDependencies;
+   
     public static $displayInNavigation = false;
     public static $group = '7.งานบริการขนส่ง';
     public static $priority = 2;
@@ -68,7 +67,7 @@ class Order_detail extends Resource
 
         return [
             ID::make(__('ID'), 'id')->sortable()->onlyOnDetail(),
-            BelongsTo::make(__('Order header no'), 'order_header', 'App\Nova\Order_header'),
+            BelongsTo::make(__('Order header no'), 'order_header', 'App\Nova\Order_header')->exceptOnForms(),
             BelongsTo::make(__('Product'), 'product', 'App\Nova\Product')
                 ->exceptOnForms(),
             BelongsTo::make(__('Unit'), 'unit', 'App\Nova\Unit')
@@ -79,32 +78,52 @@ class Order_detail extends Resource
                 ->default(true)
                 ->onlyOnForms(),
 
-            // NovaDependencyContainer::make([
             BelongsTo::make(__('เลือกจากตารางราคา'), 'productservice_price', 'App\Nova\Productservice_price')
                 ->searchable()
                 ->withSubtitles()
                 ->nullable()
-                ->onlyOnForms(),
-            // ])->dependsOn('usepricetable', true),
+                ->onlyOnForms()
+                ->hide()
+                ->dependsOn('usepricetable', function (BelongsTo $field, NovaRequest $request, FormData $formData) {
+                    if ($formData->usepricetable) {
+                        $field->show();
+                    }
+                }),
 
-            //NovaDependencyContainer::make([
+            
                 BelongsTo::make(__('Product'), 'product', 'App\Nova\Product')
                     ->searchable()
-                    ->rules('required'),
+                    ->hide()
+                    ->nullable()
+                    ->dependsOn('usepricetable', function (BelongsTo $field, NovaRequest $request, FormData $formData) {
+                        if (!$formData->usepricetable) {
+                            $field->show()->rules('required');
+                        }
+                    }),
                 BelongsTo::make(__('Unit'), 'unit', 'App\Nova\Unit')
                     ->searchable()
-                    ->rules('required'),
+                    ->hide()
+                    ->nullable()
+                    ->dependsOn('usepricetable', function (BelongsTo $field, NovaRequest $request, FormData $formData) {
+                        if (!$formData->usepricetable) {
+                            $field->show()->rules('required');
+                        }
+                    }),
                 Currency::make('ค่าขนส่ง/หน่วย', 'price')
-                    ->rules('required'),
-         //   ])->dependsOn('usepricetable', false),
+                    ->hide()
+                    ->nullable()
+                    ->dependsOn('usepricetable', function (Currency $field, NovaRequest $request, FormData $formData) {
+                        if (!$formData->usepricetable) {
+                            $field->show()->rules('required');
+                        }
+                    }),
+         
             Number::make('จำนวน', 'amount')
                 ->step('0.01')
                 ->rules('required'),
 
             Number::make('จำนวนเงิน', function () {
-                // if ($this->usepricetable) {
-                //     return number_format($this->amount *  $this->productservice_price->price, 2, '.', ',');
-                // }
+                
                 return number_format($this->amount *  $this->price, 2, '.', ',');
             }),
 

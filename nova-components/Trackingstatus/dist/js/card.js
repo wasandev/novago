@@ -13,13 +13,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["card"
-
-  // The following props are only available on resource detail cards...
-  // 'resource',
-  // 'resourceId',
-  // 'resourceName',
-  ],
+  name: 'Trackingstatus',
+  props: {
+    card: Object
+  },
   mounted: function mounted() {
     //
   }
@@ -49,27 +46,27 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   cellpadding: "0",
   cellspacing: "0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 1.Checking = กำลังตรวจรับสินค้า "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 2.New = ยืนยันการตรวจรับสินค้าแล้ว ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 3.Confirmed = สาขาต้นทางรับสินค้าไว้แล้ว "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 4.Loaded = จัดสินค้าขึ้นรถแล้ว ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 5.In transit = สินค้าอยู่ระหว่างขนส่งไปสาขา "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 6.Arrival = สินค้าอยู่สาขาปลายทาง ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 7.Branch warehouse = สินค้าอยู่คลังสาขารอการจัดส่ง "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 8.Delivery = สินค้าอยู่ระหว่างการจัดส่ง ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 9.Completed = สินค้าจัดส่งถึงผู้รับปลายทางแล้ว "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 10.Cancel = ยกเลิกรายการแล้ว ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", {
-  "class": "font-bold text-red-500"
+  "class": "font-bold text-blue-500"
 }, " 11.Problem = มีปัญหาการขนส่ง "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td")])])], -1 /* HOISTED */);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_card = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("card", true);

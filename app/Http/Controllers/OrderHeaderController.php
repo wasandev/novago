@@ -33,7 +33,7 @@ class OrderHeaderController extends Controller
         $company = CompanyProfile::find(1);
         $order = Order_header::find($order);
         $order_detail = Order_detail::find($order);
-        $qrcode = base64_encode(QrCode::format('svg')->size(80)->errorCorrection('H')->generate($order->tracking_no));
+        //$qrcode = base64_encode(QrCode::format('svg')->size(80)->errorCorrection('H')->generate($order->tracking_no));
 
         switch ($company->orderprint_option) {
             case 'form1':
@@ -69,7 +69,7 @@ class OrderHeaderController extends Controller
 
         $order = Order_header::find($order);
         $order_detail = Order_detail::find($order);
-        $qrcode = base64_encode(QrCode::format('svg')->size(80)->errorCorrection('H')->generate($order->tracking_no));
+        //$qrcode = base64_encode(QrCode::format('svg')->size(80)->errorCorrection('H')->generate($order->tracking_no));
 
         switch ($company->orderprint_option) {
             case 'form1':

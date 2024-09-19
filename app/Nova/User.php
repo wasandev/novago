@@ -14,6 +14,7 @@ use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Nova\Filters\CurrentUser;
+use Laravel\Nova\Actions\ExportAsCsv;
 
 class User extends Resource
 {
@@ -52,19 +53,23 @@ class User extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            ID::make()->sortable(),
+            ID::make()->sortable()
+                ->showOnPreview(),
 
-            Gravatar::make()->maxWidth(50),
-
+            Gravatar::make()->maxWidth(50)
+                ->showOnPreview(),
             Text::make('Name')
                 ->sortable()
-                ->rules('required', 'max:255'),
+                ->rules('required', 'max:255')
+                ->showOnPreview(),
 
             Text::make('Email')
+                ->hideFromIndex()
                 ->sortable()
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:users,email')
-                ->updateRules('unique:users,email,{{resourceId}}'),
+                ->updateRules('unique:users,email,{{resourceId}}')
+                ->showOnPreview(),
 
             Password::make('Password')
                 ->onlyOnForms()
@@ -74,17 +79,21 @@ class User extends Resource
                 ->sortable()
                 ->nullable()
                 ->filterable()
-                ->showCreateRelationButton(),
+                ->showCreateRelationButton()
+                ->showOnPreview(),
             BelongsTo::make('ฝ่าย/แผนก', 'department', 'App\Nova\Department')
                 ->sortable()
                 ->nullable()
                 ->filterable()
-                ->showCreateRelationButton(),
+                ->showCreateRelationButton()
+                ->showOnPreview(),
 
             BelongsTo::make('รายการสาขาปลายทาง(ที่ทำงานประจำ)', 'branch_rec', 'App\Nova\Branch')
                 ->sortable()
                 ->nullable()
-                ->showCreateRelationButton(),
+                ->showCreateRelationButton()
+                ->hideFromIndex()
+                ->showOnPreview(),
             Select::make(__('Role'), 'role')->options([
                 'employee' => 'พนักงาน',
                 'admin' => 'Admin',
@@ -94,7 +103,8 @@ class User extends Resource
                 ->rules('required')
                 ->canSee(function ($request) {
                     return $request->user()->role == 'admin';
-                }),
+                })
+                ->showOnPreview(),
             Text::make(__('User Code'), 'usercode')
                 ->hideFromIndex()
                 ->canSee(function ($request) {
@@ -131,7 +141,7 @@ class User extends Resource
                 
                 ->onlyOnDetail(),
             DateTime::make('Login ล่าสุด', 'logged_in_at')
-                
+                ->hideFromIndex()
                 ->sortable()
                 ->canSee(function ($request) {
                     return $request->user()->role == 'admin';
@@ -203,6 +213,16 @@ class User extends Resource
                 ->canSee(function ($request) {
                     return $request->user()->role == 'admin';
                 }),
+            ExportAsCsv::make()->withFormat(function ($model) {
+                return [
+                    'ID' => $model->getKey(),
+                    'สขา' => $model->name,
+                    'Email' => $model->email,
+                    'สาขา' => $model->branch_id,
+                    'ฝ่าย' => $model->department_id
+
+                ];
+              }),
         ];
     }
     public static function indexQuery(NovaRequest $request, $query)

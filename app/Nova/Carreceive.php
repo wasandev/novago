@@ -16,6 +16,8 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\FormData;
+use Illuminate\Database\Eloquent\Builder;
 
 class Carreceive extends Resource
 {
@@ -74,13 +76,13 @@ class Carreceive extends Resource
                 ->readonly(),
             Date::make('วันที่เอกสาร', 'receive_date')
                 ->default(today())
-                ->rules('required')
-                ->format('DD/MM/YYYY'),
+                ->rules('required'),
             BelongsTo::make(__('Branch'), 'branch', 'App\Nova\Branch')
                 ->default(function () {
                     return auth()->user()->branch_id;
                 })->searchable()
-                ->hideFromIndex(),
+                ->hideFromIndex()
+                ->rules('required'),
             Select::make('ประเภทการรับ', 'type')
                 ->options([
                     'T' => 'ค่าบรรทุก',
@@ -93,7 +95,8 @@ class Carreceive extends Resource
             BelongsTo::make(__('Vendor'), 'vendor', 'App\Nova\Vendor')
                 ->exceptOnForms(),
             Text::make(__('Description'), 'description')
-                ->hideFromIndex(),
+                ->hideFromIndex()
+                ->rules('required'),
             Currency::make(__('Amount'), 'amount'),
             Select::make('รับด้วย', 'receive_by')->options([
                 'H' => 'เงินสด',
@@ -103,48 +106,56 @@ class Carreceive extends Resource
             ])->displayUsingLabels()
                 ->sortable()
                 ->hideFromIndex(),
-            NovaDependencyContainer::make([
-                // BelongsTo::make('โอนเข้าบัญชี', 'bankaccount', 'App\Nova\Bankaccount')
-                //     ->nullable(),
-                Select::make('โอนเข้าบัญชี', 'bankaccount')
-                    ->options($bankaccount)
-                    ->displayUsingLabels()
-                    ->nullable(),
-                // Text::make('จากบัญชีเลขที่', 'frombankaccount')
-                //     ->nullable(),
-                // BelongsTo::make(__('Bank'), 'frombank', 'App\Nova\Bank')
-                //     ->nullable(),
-                // Select::make(__('Bank'), 'frombank')
-                //     ->options($bank)
-                //     ->displayUsingLabels()
-                //     ->nullable(),
-                // Text::make('จากชื่อบัญชี', 'tobankaccountname')
-                //     ->nullable()
-
-            ])->dependsOn('receive_by', 'T'),
-
-            NovaDependencyContainer::make([
-                Text::make(__('Cheque No'), 'chequeno')
-                    ->nullable(),
-                Text::make(__('Cheque Date'), 'chequedate')
-                    ->nullable(),
-                // BelongsTo::make(__('Cheque Bank'), 'chequebank', 'App\Nova\Bank')
-                //     ->nullable()
-                Select::make(__('Bank'), 'chequebank')
-                    ->options($bank)
-                    ->displayUsingLabels()
-                    ->nullable(),
-            ])->dependsOn('receive_by', 'Q'),
-
+            
+            Select::make('โอนเข้าบัญชี', 'bankaccount')
+                ->options($bankaccount)
+                ->displayUsingLabels()
+                ->nullable()
+                ->hide()
+                ->hideFromIndex()
+                ->dependsOn('receive_by', function (Select $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->receive_by === 'T') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+            Text::make(__('Cheque No'), 'chequeno')
+                ->nullable()
+                ->hide()
+                ->hideFromIndex()
+                ->dependsOn('receive_by', function (Text $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->receive_by === 'Q') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+            Text::make(__('Cheque Date'), 'chequedate')
+                ->nullable()
+                ->hide()
+                ->hideFromIndex()
+                ->dependsOn('receive_by', function (Text $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->receive_by === 'Q') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+            
+            Select::make(__('Bank'), 'chequebank')
+                ->options($bank)
+                ->displayUsingLabels()
+                ->nullable()
+                ->hide()
+                ->hideFromIndex()
+                ->dependsOn('receive_by', function (Select $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->receive_by === 'Q') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+            
             BelongsTo::make(__('Created by'), 'user', 'App\Nova\User')
                 ->onlyOnDetail(),
             DateTime::make(__('Created At'), 'created_at')
-                ->format('DD/MM/YYYY HH:mm')
                 ->onlyOnDetail(),
             BelongsTo::make(__('Updated by'), 'user_update', 'App\Nova\User')
                 ->onlyOnDetail(),
             DateTime::make(__('Updated At'), 'updated_at')
-                ->format('DD/MM/YYYY HH:mm')
                 ->onlyOnDetail(),
 
         ];

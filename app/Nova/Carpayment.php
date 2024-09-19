@@ -17,13 +17,13 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
-// use Epartment\NovaDependencyContainer\HasDependencies;
-// use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\FormData;
+use Illuminate\Database\Eloquent\Builder;
 
 class Carpayment extends Resource
 {
-   // use HasDependencies;
+   
     public static $group = '9.2 งานการเงิน/บัญชี';
     public static $priority = 7;
     public static $trafficCop = false;
@@ -123,42 +123,75 @@ class Carpayment extends Resource
             ])->displayUsingLabels()
                 ->sortable()
                 ->default('H')
-                ->hideFromIndex(),
-            //NovaDependencyContainer::make([
-                Select::make('โอนจากบัญชี', 'bankaccount_id')
-                    ->options($tobankaccount)
-                    ->displayUsingLabels()
-                    ->nullable(),
-                // BelongsTo::make('โอนจากบัญชี', 'bankaccount', 'App\Nova\Bankaccount')
-                //     ->nullable(),
-                Text::make('ไปยังบัญชีเลขที่', 'tobankaccount')
-                    ->nullable(),
+                ->hideFromIndex(),            
+            Select::make('โอนจากบัญชี', 'bankaccount_id')
+                ->options($tobankaccount)
+                ->displayUsingLabels()
+                ->nullable()
+                ->hide()
+                ->dependsOn('payment_by', function (Select $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->payment_by === 'T') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+                
+            Text::make('ไปยังบัญชีเลขที่', 'tobankaccount')
+                ->nullable()
+                ->hide()
+                ->dependsOn('payment_by', function (Text $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->payment_by === 'T') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+            Select::make(__('Bank'), 'tobank_id')
+                ->options($bank)
+                ->displayUsingLabels()
+                ->nullable()
+                ->hide()
+                ->dependsOn('payment_by', function (Select $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->payment_by === 'T') {
+                            $field->show()->rules('required');
+                        }
+                    }),
 
-                // BelongsTo::make(__('Bank'), 'tobank', 'App\Nova\Bank')
-                //     ->nullable(),
-                Select::make(__('Bank'), 'tobank_id')
-                    ->options($bank)
-                    ->displayUsingLabels()
-                    ->nullable(),
+            Text::make('ชื่อบัญชี', 'tobankaccountname')
+                ->nullable()
+                ->hide()
+                ->dependsOn('payment_by', function (Text $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->payment_by === 'T') {
+                            $field->show()->rules('required');
+                        }
+                    }),
 
-                Text::make('ชื่อบัญชี', 'tobankaccountname')
-                    ->nullable(),
+            Text::make(__('Cheque No'), 'chequeno')
+                ->nullable()
+                ->hide()
+                ->dependsOn('payment_by', function (Text $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->payment_by === 'Q') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+            Text::make(__('Cheque Date'), 'chequedate')
+                ->nullable()
+                ->hide()
+                ->dependsOn('payment_by', function (Text $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->payment_by === 'Q') {
+                            $field->show()->rules('required');
+                        }
+                    }),
 
-           // ])->dependsOn('payment_by', 'T'),
-
-            //NovaDependencyContainer::make([
-                Text::make(__('Cheque No'), 'chequeno')
-                    ->nullable(),
-                Text::make(__('Cheque Date'), 'chequedate')
-                    ->nullable(),
-
-                // BelongsTo::make(__('Cheque Bank'), 'chequebank', 'App\Nova\Bank')
-                //     ->nullable()
-                Select::make(__('Cheque Bank'), 'chequebank_id')
-                    ->options($bank)
-                    ->displayUsingLabels()
-                    ->nullable(),
-           // ])->dependsOn('payment_by', 'Q'),
+                
+            Select::make(__('Cheque Bank'), 'chequebank_id')
+                ->options($bank)
+                ->displayUsingLabels()
+                ->nullable()
+                ->hide()
+                ->dependsOn('payment_by', function (Select $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->payment_by === 'Q') {
+                            $field->show()->rules('required');
+                        }
+                    }),
+          
             Boolean::make('มีภาษีหัก ณ ที่จ่าย', 'tax_flag')
                 ->hideFromIndex()
                 ->default('true'),
@@ -212,8 +245,7 @@ class Carpayment extends Resource
     public function lenses(Request $request)
     {
         return [
-            //new CarpaymentReportByDay(),
-            //new CarpayTax()
+            
         ];
     }
 
@@ -227,7 +259,6 @@ class Carpayment extends Resource
     {
         return [
             (new PrintCarpayment)
-                //->onlyOnDetail()
                 ->confirmText('ต้องการพิมพ์ใบสำคัญจ่ายรายการนี้?')
                 ->confirmButtonText('พิมพ์')
                 ->cancelButtonText("ไม่พิมพ์")

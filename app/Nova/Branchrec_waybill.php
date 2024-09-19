@@ -93,7 +93,6 @@ class Branchrec_waybill extends Resource
             Date::make(__('Waybill date'), 'waybill_date')
                 ->readonly()
                 ->default(today())
-                ->format('DD/MM/YYYY')
                 ->exceptOnForms(),
             Select::make(__('Waybill type'), 'waybill_type')->options([
                 'general' => 'ทั่วไป',
@@ -153,26 +152,21 @@ class Branchrec_waybill extends Resource
                 ->sortable()
                 ->onlyOnDetail(),
             DateTime::make(__('วันเวลาออกจากสาขาต้นทาง'), 'departure_at')
-                ->format('DD/MM/YYYY HH:mm')
                 ->exceptOnForms()
                 ->hideFromIndex()
                 ->readonly(),
             DateTime::make(__('กำหนดถึงสาขาปลายทาง'), 'arrival_at')
-                ->format('DD/MM/YYYY HH:mm')
                 ->hideFromIndex()
                 ->readonly(),
             DateTime::make(__('วันเวลาถึงสาขาปลายทางจริง'), 'arrivaled_at')
-                ->format('DD/MM/YYYY HH:mm')
                 ->hideFromIndex(),
             BelongsTo::make(__('Created by'), 'user', 'App\Nova\User')
                 ->onlyOnDetail(),
             DateTime::make(__('Created At'), 'created_at')
-                ->format('DD/MM/YYYY HH:mm')
                 ->onlyOnDetail(),
             BelongsTo::make(__('Updated by'), 'user_update', 'App\Nova\User')
                 ->onlyOnDetail(),
             DateTime::make(__('Updated At'), 'updated_at')
-                ->format('DD/MM/YYYY HH:mm')
                 ->onlyOnDetail(),
             Currency::make('ต้นทุนค่าจัดลงสินค้าของสาขา', 'branch_car_income'),
               

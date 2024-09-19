@@ -26,6 +26,7 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use App\Nova\Metrics\OrderIncomes;
 use App\Nova\Metrics\OrdersByPaymentType;
@@ -34,11 +35,11 @@ use App\Nova\Metrics\OrdersByBranchRec;
 use App\Nova\Metrics\OrdersPerMonth;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Http\Requests\ActionRequest;
-//use Maatwebsite\LaravelNovaExcel\Actions\DownloadExcel;
-
+use Laravel\Nova\Actions\ExportAsCsv;
 use Wasandev\Trackingstatus\Trackingstatus;
-//use Wasandev\QrCodeScan\QrCodeScan;
-//use Jenssegers\Agent\Agent;
+use Laravel\Nova\Fields\FormData;
+use Illuminate\Database\Eloquent\Builder;
+use Jenssegers\Agent\Agent;
 
 
 class Order_header extends Resource
@@ -104,6 +105,34 @@ class Order_header extends Resource
     {
         
         return [
+            Number::make('ระยะเวลาจัดส่ง', function () {
+                    $orderstatus = \App\Models\Order_status::where('order_header_id','=',$this->id)->get();
+                    $i = 0;
+                    $len = count($orderstatus);
+                    $trandays = 0;
+                    $fromdate = $this->order_header_date ;
+                    $todate = now();
+                    $completed_status = \App\Models\Order_status::where('order_header_id','=',$this->id)
+                                                        ->where('status','=','completed')
+                                                        ->first();
+                    if ($this->order_status == 'completed') {
+                        $todate = $completed_status->created_at;
+                        $trandays = $fromdate->diffInDays($todate) + 1;
+
+                    }else{
+                       
+                        foreach ($orderstatus as $status) {
+                            if($i = $len- 1 ) {                                    
+                                $fromdate = $status->created_at;
+                                $todate = now();
+                                      
+                            } 
+                            $i++;
+                        }
+                       $trandays = $fromdate->diffInDays($todate) +1; 
+                    }
+                    return $trandays;
+            })->exceptOnForms(),
             ID::make('ID', 'id')
                 ->sortable()
                 ->showOnPreview(),
@@ -121,7 +150,6 @@ class Order_header extends Resource
                 ->sortable()
                 ->showOnPreview(),
             BelongsTo::make(__('From branch'), 'branch', 'App\Nova\Branch')
-                //->hideWhenCreating()
                 ->onlyOnDetail()
                 ->withMeta([
                     'belongsToId' => $this->branch_id ?? $request->user()->branch_id
@@ -182,37 +210,17 @@ class Order_header extends Resource
             ])->displayUsingLabels()
                 ->onlyOnDetail(),
 
-
-            Boolean::make('สแกน Qr Code ผู้ส่ง', 'useqrcode')
-                ->onlyOnForms(),
-            // NovaDependencyContainer::make([
-            //     QrCodeScan::make('Qr code ผู้ส่ง', 'customer_id')   // Name -> label name, name_id -> save to column
-            //         ->canInput()                        // the user able to input the code using keyboard, default false
-            //         ->canSubmit()                       // on modal scan need to click submit to send the code to the input value, default false
-            //         ->displayValue()                    // set qr size on detail, default 100
-            //         ->qrSizeIndex()                     // set qr size on index, default 30
-            //         ->qrSizeDetail()                    // set qr size on detail, default 100
-            //         ->qrSizeForm()                      // set qr size on form, default 50
-            //         ->viewable()                        // set viewable if has belongto value, default true
-            //         ->displayWidth('320px')          // set display width, default auto
-
-            // ])->dependsOn('useqrcode', true)
-            //     ->onlyOnForms(),
-            // NovaDependencyContainer::make([
-            //     BelongsTo::make('ผู้ส่งสินค้า', 'customer', 'App\Nova\Customer')
+            // BelongsTo::make('ผู้ส่งสินค้า', 'customer', 'App\Nova\Customer')
             //         ->searchable()
             //         ->withSubtitles()
-            //         ->showCreateRelationButton()
-
-            // ])->dependsOn('useqrcode', false)
-            //     ->onlyOnForms(),
+            //         ->showCreateRelationButton()->onlyOnForms(),
 
             BelongsTo::make('ผู้ส่งสินค้า', 'customer', 'App\Nova\Customer')
                 ->searchable()
                 ->withSubtitles()
-                ->exceptOnForms()
                 ->hideFromIndex()
-                ->showOnPreview(),
+                ->showOnPreview()
+                ->showCreateRelationButton(),
 
             Text::make('ที่อยู่', function () {
                 return $this->customer->address . ' ' . $this->customer->sub_district . ' ' . $this->customer->district
@@ -220,13 +228,39 @@ class Order_header extends Resource
             })->onlyOnDetail()
             ->showOnPreview(),
 
+            // BelongsTo::make('ผู้รับสินค้า', 'to_customer', 'App\Nova\Customer')
+            //     ->searchable()
+            //     ->withSubtitles()
+            //     ->showCreateRelationButton()
+            //     ->sortable()
+            //     ->hideFromIndex()
+            //     ->showOnPreview(),
             BelongsTo::make('ผู้รับสินค้า', 'to_customer', 'App\Nova\Customer')
-                ->searchable()
-                ->withSubtitles()
-                ->showCreateRelationButton()
-                ->sortable()
-                ->hideFromIndex()
-                ->showOnPreview(),
+                    ->dependsOn(['to_branch'], function (BelongsTo $field, NovaRequest $request, FormData $formData) {
+                            
+                            $to_branch = $formData->to_branch ;
+                            
+                            if ($to_branch) { 
+                                $to_branch_area = \App\Models\Branch_area::where('branch_id', $to_branch)->get('district');
+                
+                                $field->relatableQueryUsing(function (NovaRequest $request, Builder $query) use ($to_branch_area) {
+                                    $query->whereIn('district', $to_branch_area)->where('status', true);
+                                });
+                                
+                            }else {
+                                $field->relatableQueryUsing(function (NovaRequest $request, Builder $query)  { 
+                                    $query->where('status', true);
+                                });
+                            }
+                        }
+                    )->rules('required')
+                     ->withSubtitles()
+                     ->searchable()
+                    ->withSubtitles()
+                    ->showCreateRelationButton()
+                    ->sortable()
+                    ->hideFromIndex()
+                    ->showOnPreview(),
             Currency::make('จำนวนเงิน', 'order_amount')
                 ->exceptOnForms(),
             
@@ -363,6 +397,7 @@ class Order_header extends Resource
             new lenses\ValueByOrderBranchWarehouse(),
             new lenses\ValueByOrderBranchCompletedNotPay(),
             new lenses\ValueByDistrictAll(),
+            new lenses\BranchTranDays(),
         ];
     }
 
@@ -455,6 +490,8 @@ class Order_header extends Resource
                 ->canSee(function ($request) {
                     return $request->user()->hasPermissionTo('view order_headers');
                 }),
+
+           ExportAsCsv::make()->nameable(),
             
         ];
     }

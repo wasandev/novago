@@ -108,7 +108,9 @@ class Car extends Resource
 
             Image::make('รูปรถ', 'carimage')
                 ->rules("mimes:jpeg,bmp,png", "max:2048")
-                ->help('ขนาดไฟล์ไม่เกิน 2 MB.'),
+                ->help('ขนาดไฟล์ไม่เกิน 2 MB.')
+                ->showOnPreview()
+                ->hideFromIndex(),
             new Panel('รายละเอียดของรถ', $this->carFields()),
             new Panel('รายละเอียดอื่นๆของรถ', $this->carotherFields()),
             BelongsTo::make(__('Created by'), 'user', 'App\Nova\User')

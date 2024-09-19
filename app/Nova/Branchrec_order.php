@@ -28,6 +28,7 @@ use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Status;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Wasandev\Orderstatus\Orderstatus;
 
@@ -92,6 +93,34 @@ class Branchrec_order extends Resource
     public function fields(Request $request)
     {
         return [
+            Number::make('ระยะเวลาจัดส่ง', function () {
+                    $orderstatus = \App\Models\Order_status::where('order_header_id','=',$this->id)->get();
+                    $i = 0;
+                    $len = count($orderstatus);
+                    $trandays = 0;
+                    $fromdate = $this->order_header_date ;
+                    $todate = now();
+                    $completed_status = \App\Models\Order_status::where('order_header_id','=',$this->id)
+                                                        ->where('status','=','completed')
+                                                        ->first();
+                    if ($this->order_status == 'completed') {
+                        $todate = $completed_status->created_at;
+                        $trandays = $fromdate->diffInDays($todate) + 1;
+
+                    }else{
+                       
+                        foreach ($orderstatus as $status) {
+                            if($i = $len- 1 ) {                                    
+                                $fromdate = $status->created_at;
+                                $todate = now();
+                                      
+                            } 
+                            $i++;
+                        }
+                       $trandays = $fromdate->diffInDays($todate) + 1; 
+                    }
+                    return $trandays;
+            })->exceptOnForms(),
             Status::make(__('Order status'), 'order_status')
                 ->loadingWhen(['in transit'])
                 ->failedWhen(['cancel'])

@@ -17,11 +17,11 @@ use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
-use Epartment\NovaDependencyContainer\NovaDependencyContainer;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 use Jenssegers\Agent\Agent;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Fields\FormData;
 
 
 class OrderConfirmed extends Action
@@ -107,7 +107,7 @@ class OrderConfirmed extends Action
     {
         $bankaccount = Bankaccount::where('defaultflag', '=', true)->pluck('account_no', 'id');
         $waybills = Waybill::where('waybill_status', 'loading')->pluck('waybill_no', 'id');
-        $loaders = User::where('branch_id', '=', auth()->user()->branch_id);
+        $loaders = User::where('branch_id', '=', auth()->user()->branch_id)->pluck('name', 'id');
         $ordercancels = Order_header::where('order_status', 'cancel')
             ->whereYear('order_header_date', date('Y'))
             ->whereMonth('order_header_date', date('m'))
@@ -156,12 +156,23 @@ class OrderConfirmed extends Action
                         'L' => 'วางบิลปลายทาง'
                     ])->displayUsingLabels()
                         ->default($paymenttype),
-                    NovaDependencyContainer::make([
-                        Select::make(__('Bank Account no'), 'bankaccount')
-                            ->options($bankaccount)
-                            ->displayUsingLabels(),
-                        Text::make(__('Bank reference no'), 'reference'),
-                    ])->dependsOn('paymenttype', 'T'),
+                   
+                    Select::make(__('Bank Account no'), 'bankaccount')
+                        ->options($bankaccount)
+                        ->displayUsingLabels()
+                        ->hide()
+                        ->dependsOn('paymenttype', function (Select $field, NovaRequest $request, FormData $formData) {
+                            if ($formData->paymenttype === 'T') {
+                                $field->show()->rules('required');
+                            }
+                        }),
+                    Text::make(__('Bank reference no'), 'reference')
+                    ->hide()
+                    ->dependsOn('paymenttype', function (Text $field, NovaRequest $request, FormData $formData) {
+                        if ($formData->paymenttype === 'T') {
+                            $field->show()->rules('required');
+                        }
+                    }),
 
                     Select::make('สินค้าขึ้นรถแล้ว เลือกใบกำกับ', 'waybill_branch')
                         ->options($waybillOptions)
@@ -192,14 +203,23 @@ class OrderConfirmed extends Action
                 'L' => 'วางบิลปลายทาง'
             ])->displayUsingLabels()
                 ->default('H'),
-            NovaDependencyContainer::make(
-                [
-                    Select::make(__('Bank Account no'), 'bankaccount')
-                        ->options($bankaccount)
-                        ->displayUsingLabels(),
-                    Text::make(__('Bank reference no'), 'reference'),
-                ]
-            )->dependsOn('paymenttype', 'T'),
+            Select::make(__('Bank Account no'), 'bankaccount')
+                ->options($bankaccount)
+                ->displayUsingLabels()
+                ->hide()
+                ->dependsOn('ownertype', function (Select $field, NovaRequest $request, FormData $formData) {
+                    if ($formData->paymenttype === 'T') {
+                        $field->show()->rules('required');
+                    }
+                }),
+            Text::make(__('Bank reference no'), 'reference')
+                ->hide()
+                ->dependsOn('ownertype', function (Text $field, NovaRequest $request, FormData $formData) {
+                    if ($formData->paymenttype === 'T') {
+                        $field->show()->rules('required');
+                    }
+                }),
+           
             Select::make(__('Waybill'), 'waybill_branch')
                 ->options($waybills)
                 ->displayUsingLabels()
